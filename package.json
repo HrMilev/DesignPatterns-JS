@@ -1,7 +1,9 @@
 {
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start-server": "http-server"
   },
+  "main": "./dist/app.js",
   "devDependencies": {
     "typescript": "^4.6.3",
     "http-server": "^14.1.0"
