@@ -1,9 +1,9 @@
 import { IVault } from "./IVault.js";
+import { Vault } from "./Vault.js";
 
 export class DefenseVault implements IVault {
     private map = new Map();
-
-    constructor (private vault: IVault) {}
+    private vault = new Vault();
 
     showMeTheMoney(name: string): string {
         if(name === 'John') {
@@ -20,3 +20,5 @@ export class DefenseVault implements IVault {
 
 //This is the proxy class, which should perform some additional work,
 //(could be a protector and cache of the real service class)
+//Proxy can create real service by itself, no need to pass it. (Composition is done at compile time) 
+//Client doesn't know about the relationship between Proxy and real service.
