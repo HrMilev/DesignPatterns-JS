@@ -3,6 +3,7 @@ import { decorator } from './Decorator/decorator.js';
 import { composite } from './Composite/composite.js';
 import { adapter } from './Adapter/adapter.js';
 import { factoryMethod } from './FactoryMethod/factoryMethod.js';
+import { mediator } from './Mediator/mediator.js';
 
 interface PatternWindow extends Window {
     proxyPattern(name: string) : void
@@ -10,6 +11,7 @@ interface PatternWindow extends Window {
     compositePattern() : void
     adapterPattern(): void
     factoryMethodPattern(type: number, name: string): void
+    mediatorPattern(): void
 }
 
 declare let window: PatternWindow;
@@ -23,3 +25,5 @@ window.compositePattern = composite;
 window.adapterPattern = adapter;
 
 window.factoryMethodPattern = factoryMethod; // try with 0 (cheap), 'John'
+
+window.mediatorPattern = mediator;
