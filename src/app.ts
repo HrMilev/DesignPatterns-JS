@@ -5,6 +5,7 @@ import { adapter } from './Adapter/adapter.js';
 import { factoryMethod } from './FactoryMethod/factoryMethod.js';
 import { mediator } from './Mediator/mediator.js';
 import { bridge } from './Bridge/bridge.js';
+import { singleton } from './Singleton/singleton.js';
 
 interface PatternWindow extends Window {
     proxyPattern(name: string) : void
@@ -14,6 +15,7 @@ interface PatternWindow extends Window {
     factoryMethodPattern(type: number, name: string) : void
     mediatorPattern() : void
     bridgePattern(place: string) : void
+    singletonPattern() : void
 }
 
 declare let window: PatternWindow;
@@ -31,3 +33,5 @@ window.factoryMethodPattern = factoryMethod; // try with 0 (cheap), 'John'
 window.mediatorPattern = mediator;
 
 window.bridgePattern = bridge;
+
+window.singletonPattern = singleton;
